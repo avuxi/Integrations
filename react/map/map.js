@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Map from '../map.js';
+import { Map } from 'react-avapi';
 
 class App extends Component {
   render() {
