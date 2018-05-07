@@ -24,7 +24,7 @@
     name: 'app',
     data () {
       return {
-        path: window.location.pathname.slice(1)
+        path: window.location.pathname.replace(/\//g, '')
       }
     }
   }
