@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MapComponent, LseComponent } from 'angular-avapi';
+import { MapComponent, LseComponent } from 'ngx-avapi';
 
 @NgModule({
   declarations: [
