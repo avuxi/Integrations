@@ -5,7 +5,7 @@ import { Map } from 'react-avapi';
 class App extends Component {
   render() {
     return (
-      <Map confId='5ae6df87a93f4e1e02a6122a'
+      <Map confId='%CONF_ID%'
            lat='41.38605'
            lng='2.17014'
            zoom='13' />

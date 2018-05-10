@@ -20,7 +20,7 @@
 
 <body onload="LoadMap();" style="background-color: gray;">
   <div id="map_canvas" style="position: fixed;overflow: hidden;top: 15px;left: 20px;right: 20px;bottom: 20px;border-radius: 4px;border: 5px solid white;"></div>
-  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDkL2ssurr7Wz1aPI3Xs5a7TVjB9fj49go'></script>
+  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&key=%MAP_KEY%'></script>
 
   <script type='text/javascript'>
     var map;
@@ -37,12 +37,12 @@
       sc.id = 'vxscript';
       sc.type = 'text/javascript';
       sc.async = 'async';
-      sc.src = 'https://m.avuxiapis.com/v3/s/72a8dacc25c17?callback=avapil&ln=en';
+      sc.src = 'https://m.avuxiapis.com/v3/s/%SCRIPT_ID%?callback=avapil&ln=en';
       document.body.appendChild(sc);
     }
 
     function avapil() {
-      AVUXI.MapStart(map, '5ae6df87a93f4e1e02a6122a');
+      AVUXI.MapStart(map, '%CONF_ID%');
     };
   </script>
 </body>

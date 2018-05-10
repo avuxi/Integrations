@@ -1,5 +1,10 @@
 # integrations
 
+```sh
+# replace %MAP_KEY% with your API key from Google Maps
+# replace %SCRIPT_ID% and %CONF_ID% with values from https://admin.avuxi.com
+```
+
 ### javascript
 
 ```sh

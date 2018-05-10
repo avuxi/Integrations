@@ -5,7 +5,7 @@ import { Lse } from 'react-avapi';
 class App extends Component {
   render() {
     return (
-      <Lse confId='5ae6e03da93f4e1e02a6122b'
+      <Lse confId='%CONF_ID%'
            lat='41.390847'
            lng='2.16902' />
     );
