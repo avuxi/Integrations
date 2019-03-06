@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AVUXI Widget Demo</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <script src="./bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="./bower_components/google-map/google-map.html">
+    <style>
+        body, html {
+            font-family: 'Roboto', Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+        }
+        google-map {
+          height: 600px;
+        }
+    </style>
+</head>
+
+
+<body onload="LoadMap();">
+    <google-map latitude="41.38605" longitude="2.17014" zoom="10" api-key=#GOOGLE_MAPS_API_KEY#></google-map>
+
+    <script type='text/javascript'>
+        var map;
+
+        function LoadMap() {
+            map = document.querySelector('google-map').map;
+
+            var sc = document.createElement('script');
+            sc.id = 'vxscript';
+            sc.type = 'text/javascript';
+            sc.async = 'async';
+            sc.src = 'https://m.avuxiapis.com/v3/s/#AVUXI_PROJECT_ID#?callback=avapil&ln=en';
+            document.body.appendChild(sc);
+        }
+
+        function avapil() {
+            document.querySelector('google-map').shadowRoot.appendChild(document.querySelector('.vxstyle'));
+            document.querySelector('google-map').shadowRoot.appendChild(document.querySelector('.vxvhidden'));
+            AVUXI.MapStart(map, '#AVUXI_MAP_ID#');
+        };
+    </script>
+</body>
+
+</html>
