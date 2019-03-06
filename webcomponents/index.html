@@ -20,7 +20,7 @@
 
 
 <body onload="LoadMap();">
-    <google-map latitude="41.38605" longitude="2.17014" zoom="10" api-key=#GOOGLE_MAPS_API_KEY#></google-map>
+    <google-map latitude="41.38605" longitude="2.17014" zoom="10" api-key=%GOOGLE_MAP_KEY%></google-map>
 
     <script type='text/javascript'>
         var map;
@@ -32,14 +32,14 @@
             sc.id = 'vxscript';
             sc.type = 'text/javascript';
             sc.async = 'async';
-            sc.src = 'https://m.avuxiapis.com/v3/s/#AVUXI_PROJECT_ID#?callback=avapil&ln=en';
+            sc.src = 'https://m.avuxiapis.com/v3/s/%AVUXI_PROJECT_ID%?callback=avapil&ln=en';
             document.body.appendChild(sc);
         }
 
         function avapil() {
             document.querySelector('google-map').shadowRoot.appendChild(document.querySelector('.vxstyle'));
             document.querySelector('google-map').shadowRoot.appendChild(document.querySelector('.vxvhidden'));
-            AVUXI.MapStart(map, '#AVUXI_MAP_ID#');
+            AVUXI.MapStart(map, '%AVUXI_MAP_ID%');
         };
     </script>
 </body>
