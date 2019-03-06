@@ -37,3 +37,10 @@ npm i
 npm start
 # open http://localhost:4200/map or http://localhost:4200/lse
 ```
+### web component
+
+```sh
+cd webcomponents
+npm install -g bower
+bower install --save GoogleWebComponents/google-map
+# open http://localhost:8080/webcomponents or http://localhost:8080/webcomponents
